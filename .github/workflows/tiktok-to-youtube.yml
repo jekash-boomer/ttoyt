@@ -5,7 +5,7 @@ name: TikTok to YouTube Uploader
 on:
   schedule:
     # Runs every day at 9:00 AM UTC (adjust timezone as needed)
-    - cron: '0 */6 * * *'
+    - cron: '0 9 * * *'
   
   # Allows manual trigger from GitHub Actions tab
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pip install yt-dlp google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+        pip install 'yt-dlp[curl-cffi]' google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
     
     - name: Create credentials.json from secret
       run: |
