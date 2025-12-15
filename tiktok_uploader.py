@@ -11,7 +11,7 @@ from googleapiclient.http import MediaFileUpload
 import pickle
 
 # Configuration
-TIKTOK_USERNAME = "your_tiktok_username"  # Change this to your TikTok username
+TIKTOK_USERNAME = os.getenv('TIKTOK_USERNAME', 'your_tiktok_username')
 UPLOAD_HISTORY_FILE = "uploaded_videos.json"
 CREDENTIALS_FILE = "credentials.json"  # YouTube API credentials
 TOKEN_FILE = "token.pickle"
