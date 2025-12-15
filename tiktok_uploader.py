@@ -141,7 +141,7 @@ def upload_to_youtube(youtube, video_file, title, description):
     body = {
         'snippet': {
             'title': title,
-            'description': description + "\n\n📱 Originally posted on TikTok\n#TikTok #Shorts",
+            'description': description + "\n\n📱Share \n#Shorts",
             'tags': ['TikTok', 'shorts', TIKTOK_USERNAME],
             'categoryId': '22'  # People & Blogs
         },
@@ -243,7 +243,7 @@ def main(upload_all=False):
                 youtube,
                 video_file,
                 video_to_upload['title'],
-                video_to_upload.get('description', 'Check out my TikTok content!')
+                video_to_upload.get('description', 'Check out my other content!')
             )
             
             # Update history
