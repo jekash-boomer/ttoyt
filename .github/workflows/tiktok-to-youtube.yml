@@ -5,7 +5,7 @@ name: TikTok to YouTube Uploader
 on:
   schedule:
     # Runs every day at 9:00 AM UTC (adjust timezone as needed)
-    - cron: '30 13 * * *'
+    - cron: '0 */6 * * *'
   
   # Allows manual trigger from GitHub Actions tab
   workflow_dispatch:
